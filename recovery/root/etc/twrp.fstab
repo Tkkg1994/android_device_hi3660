@@ -5,7 +5,7 @@
 /cust           ext4            /dev/block/platform/ff3b0000.ufs/by-name/cust_a       flags=display="cust";backup=1
 /misc		emmc		/dev/block/platform/ff3b0000.ufs/by-name/misc	flags=display="misc";backup=0
 /oeminfo        emmc            /dev/block/platform/ff3b0000.ufs/by-name/oeminfo    flags=display="oeminfo";backup=1
-/data		ext4		/dev/block/dm-0
+/data		ext4		/dev/block/platform/ff3b0000.ufs/by-name/userdata
 /system		ext4		/dev/block/platform/ff3b0000.ufs/by-name/system_a
 /external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="MicroSD Card";storage;wipeingui;removable
 /usbotg		auto		/dev/block/sda1         /dev/block/sda          flags=display="USB OTG";storage;removable;backup=0
