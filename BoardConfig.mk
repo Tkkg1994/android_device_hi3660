@@ -1,0 +1,72 @@
+LOCAL_PATH := device/huawei/generic_a15
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := hi3660
+
+# Platform
+TARGET_BOARD_PLATFORM := hi3660
+TARGET_BOARD_PLATFORM_GPU := mali-g71
+
+# Flags
+#TARGET_GLOBAL_CFLAGS +=
+#TARGET_GLOBAL_CPPFLAGS +=
+#COMMON_GLOBAL_CFLAGS +=
+
+# Architecture
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_SMP := true
+
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
+
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+# Kernel
+BOARD_KERNEL_BASE := 0x00078000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_CMDLINE := loglevel=4 initcall_debug=n page_tracker=on androidboot.selinux=permissive
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x07988000
+TARGET_PREBUILT_KERNEL := device/huawei/generic_a15/recovery/kernel
+
+# Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE		:= 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE	:= 67108864
+BOARD_SYSTEMIMAGE_PARTITION_SIZE	:= 2684354560
+BOARD_USERDATAIMAGE_PARTITION_SIZE	:= 26935820288
+BOARD_FLASH_BLOCK_SIZE			:= 4096
+
+# File systems
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# TWRP specific build flags
+RECOVERY_VARIANT := twrp
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+TW_THEME := portrait_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TWHAVE_SELINUX := true
+TW_BRIGHTNESS_PATH := "/sys/devices/platform/hisi_fb.1048577/leds/lcd_backlight0/brightness"
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/Battery"
+TW_MAX_BRIGHTNESS := 255
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_EXCLUDE_SUPERSU := true
+TW_MAX_BRIGHTNESS := 9960
+TW_DEFAULT_BRIGHTNESS := 3984
+
+# Asian region languages
+TW_EXTRA_LANGUAGES := true
+
+# Paths
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+
