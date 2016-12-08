@@ -20,4 +20,8 @@ $(call inherit-product, device/huawei/generic_a15/generic_a15.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
+PRODUCT_MODEL := generic_a15
+PRODUCT_BRAND := Huawei
+PRODUCT_MANUFACTURER := Huawei
 PRODUCT_NAME := omni_generic_a15
+PRODUCT_DEVICE := generic_a15

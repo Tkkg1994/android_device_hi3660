@@ -49,16 +49,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP specific build flags
-RECOVERY_VARIANT := twrp
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TWHAVE_SELINUX := true
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/hisi_fb.1048577/leds/lcd_backlight0/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/Battery"
 TW_MAX_BRIGHTNESS := 255
-BOARD_HAS_NO_SELECT_BUTTON := true
 TW_EXCLUDE_SUPERSU := true
 TW_MAX_BRIGHTNESS := 9960
 TW_DEFAULT_BRIGHTNESS := 3984
@@ -66,7 +61,4 @@ TW_DEFAULT_BRIGHTNESS := 3984
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
 
-# Paths
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 
