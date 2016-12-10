@@ -7,5 +7,8 @@
 /oeminfo        emmc		/dev/block/platform/ff3b0000.ufs/by-name/oeminfo		flags=display="oeminfo";backup=1
 /data		f2fs		/dev/block/platform/ff3b0000.ufs/by-name/userdata		flags=display="data";backup=1
 /system		ext4		/dev/block/platform/ff3b0000.ufs/by-name/system_a		flags=display="system";backup=1
+/vendor		ext4		/dev/block/platform/ff3b0000.ufs/by-name/vendor_a		flags=display="vendor";backup=1
+/product	ext4		/dev/block/platform/ff3b0000.ufs/by-name/product_a		flags=display="product";backup=1
+/version	ext4		/dev/block/platform/ff3b0000.ufs/by-name/version_a		flags=display="version";backup=1
 /external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="MicroSD Card";storage;wipeingui;removable
 /usb-otg	auto		/dev/block/sde1         /dev/block/sde				flags=display="USB OTG";storage;wipeingui;removable

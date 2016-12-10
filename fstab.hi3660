@@ -4,6 +4,9 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 system		/system		ext4:squashfs	ro    wait,verify
 splash2		/splash2	ext4		rw,nosuid,nodev,noatime,data=ordered,context=u:object_r:splash2_data_file:s0 wait,check
+vendor		/vendor		ext4:squashfs	ro    wait,verify
+product		/product	ext4:squashfs	ro    wait,verify
+version		/version	ext4:squashfs	ro    wait,verify
 cust		/cust		ext4:squashfs	ro    wait,verify
 userdata	/data		f2fs		nosuid,nodev,noatime,discard,inline_data,inline_xattr wait,check,fileencryptioninline
 cache		/cache		ext4		rw,nosuid,nodev,noatime,data=ordered wait,check
