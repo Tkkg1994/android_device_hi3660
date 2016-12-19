@@ -35,7 +35,6 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := loglevel=4 initcall_debug=n page_tracker=on androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --tags_offset 0x07988000
 TARGET_PREBUILT_KERNEL := device/huawei/generic_a15/recovery/kernel
-TARGET_RECOVERY_DEVICE_DIRS += device/huawei/generic_a15
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE		:= 33554432
