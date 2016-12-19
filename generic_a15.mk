@@ -18,6 +18,8 @@ LOCAL_PATH := device/huawei/generic_a15
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+$(shell cp -rf device/huawei/generic_a15/recovery/root out/target/product/generic_a15/recovery)
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
