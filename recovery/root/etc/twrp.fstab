@@ -1,14 +1,15 @@
-/modem_secure	ext4		/dev/block/platform/ff3b0000.ufs/by-name/modem_secure		flags=display="modem_secure";backup=1
 /boot		emmc		/dev/block/platform/ff3b0000.ufs/by-name/boot_a			flags=display="boot";backup=1
-/recovery       emmc		/dev/block/platform/ff3b0000.ufs/by-name/recovery_a		flags=display="recovery";backup=1
 /cache		ext4		/dev/block/platform/ff3b0000.ufs/by-name/cache			flags=display="cache";backup=1
 /cust           ext4		/dev/block/platform/ff3b0000.ufs/by-name/cust_a
-/misc		emmc		/dev/block/platform/ff3b0000.ufs/by-name/misc
-/oeminfo        emmc		/dev/block/platform/ff3b0000.ufs/by-name/oeminfo		flags=display="oeminfo";backup=1
 /data		f2fs		/dev/block/platform/ff3b0000.ufs/by-name/userdata		flags=display="data";backup=1
-/system		ext4		/dev/block/platform/ff3b0000.ufs/by-name/system_a		flags=display="system";backup=1
-/vendor		ext4		/dev/block/platform/ff3b0000.ufs/by-name/vendor_a		flags=display="vendor";backup=1
-/product	ext4		/dev/block/platform/ff3b0000.ufs/by-name/product_a		flags=display="product";backup=1
-/version	ext4		/dev/block/platform/ff3b0000.ufs/by-name/version_a		flags=display="version";backup=1
 /external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1			flags=display="MicroSD Card";storage;wipeingui;removable
+/misc		emmc		/dev/block/platform/ff3b0000.ufs/by-name/misc
+/modem_secure	ext4		/dev/block/platform/ff3b0000.ufs/by-name/modem_secure		flags=display="modem_secure";backup=1
+/oeminfo        emmc		/dev/block/platform/ff3b0000.ufs/by-name/oeminfo		flags=display="oeminfo";backup=1
+/product	ext4		/dev/block/platform/ff3b0000.ufs/by-name/product_a		flags=display="product";backup=1;wipeingui
+/recovery       emmc		/dev/block/platform/ff3b0000.ufs/by-name/recovery_a		flags=display="recovery";backup=1
+/splash2	ext4		/dev/block/platform/ff3b0000.ufs/by-name/splash2		flags=display="splash2";backup=1
+/system		ext4		/dev/block/platform/ff3b0000.ufs/by-name/system_a		flags=display="system";backup=1
 /usb-otg	auto		/dev/block/sde1         /dev/block/sde				flags=display="USB OTG";storage;wipeingui;removable
+/vendor		ext4		/dev/block/platform/ff3b0000.ufs/by-name/vendor_a		flags=display="vendor";backup=1;wipeingui
+/version	ext4		/dev/block/platform/ff3b0000.ufs/by-name/version_a		flags=display="version";backup=1
