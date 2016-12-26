@@ -68,6 +68,7 @@ TW_EXTRA_LANGUAGES := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
