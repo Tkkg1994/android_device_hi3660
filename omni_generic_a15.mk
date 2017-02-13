@@ -1,4 +1,5 @@
-# Copyright (C) 2015 The CyanogenMod Project
+#
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,17 +12,29 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-## Specify phone tech before including full_phone
+# Sample: This is where we'd set a backup provider if we had one
+# $(call inherit-product, device/sample/products/backup_overlay.mk)
+
+# Get the prebuilt list of APNs
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
-$(call inherit-product, device/huawei/generic_a15/generic_a15.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common Omni stuff.
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-PRODUCT_MODEL := generic_a15
-PRODUCT_BRAND := Huawei
-PRODUCT_MANUFACTURER := Huawei
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    charger
+
+PRODUCT_COPY_FILES += \
+    device/huawei/generic_a15/Image:Image
+
 PRODUCT_NAME := omni_generic_a15
 PRODUCT_DEVICE := generic_a15
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := generic_a15
+PRODUCT_MANUFACTURER := Huawei

@@ -1,0 +1,25 @@
+import /init.usb.rc
+
+on init
+    mkdir /cust
+
+    symlink /dev/block/platform/ff3b0000.ufs /dev/block/bootdevice
+
+on fs
+    start teecd
+    start volisnotd
+
+on boot
+
+service teecd /sbin/teecd
+    user root
+    group root
+    disabled
+    seclabel u:r:tee:s0
+
+service volisnotd /sbin/volisnotd -m
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:tee:s0
