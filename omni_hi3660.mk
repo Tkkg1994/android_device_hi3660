@@ -31,10 +31,10 @@ PRODUCT_PACKAGES += \
     charger
 
 PRODUCT_COPY_FILES += \
-    device/huawei/generic_a15/Image:Image
+    device/huawei/hi3660/Image:Image
 
-PRODUCT_NAME := omni_generic_a15
-PRODUCT_DEVICE := generic_a15
+PRODUCT_NAME := omni_hi3660
+PRODUCT_DEVICE := hi3660
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := generic_a15
+PRODUCT_MODEL := hi3660
 PRODUCT_MANUFACTURER := Huawei

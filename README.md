@@ -1,4 +1,4 @@
-## TWRP device tree for Huawei Mate 9
+## TWRP device tree for Huawei Mate 9 (hi3660)
 
 ```
 repo init -u https://github.com/omnirom/android.git -b android-7.1
@@ -10,5 +10,5 @@ To build:
 
 ```sh
 . build/envsetup.sh
-lunch omni_generic_a15-eng && mka recoveryimage
+lunch omni_hi3660-eng && mka recoveryimage
 ```

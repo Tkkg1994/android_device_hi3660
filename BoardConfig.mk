@@ -27,7 +27,7 @@ BOARD_KERNEL_BASE := 0x00078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := loglevel=4 initcall_debug=n page_tracker=on slub_min_objects=16 androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07b88000 --second_offset 0x00e88000 --tags_offset 0x07988000
-TARGET_PREBUILT_KERNEL := device/huawei/generic_a15/Image
+TARGET_PREBUILT_KERNEL := device/huawei/hi3660/Image
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE		:= 33554432
