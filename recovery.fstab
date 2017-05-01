@@ -1,6 +1,6 @@
-/boot		emmc		/dev/block/platform/ff3b0000.ufs/by-name/boot_a		flags=display="boot";backup=1
+/boot		emmc		/dev/block/platform/ff3b0000.ufs/by-name/boot_a		flags=display="boot";backup=1;flashimg
 /cache		ext4		/dev/block/platform/ff3b0000.ufs/by-name/cache		flags=display="cache";backup=1;flashimg
-/cust           ext4		/dev/block/platform/ff3b0000.ufs/by-name/cust_a
+/cust		ext4		/dev/block/platform/ff3b0000.ufs/by-name/cust_a		flags=display="cust";backup=1;flashimg
 /data		f2fs		/dev/block/platform/ff3b0000.ufs/by-name/userdata	flags=display="data";backup=1;flashimg
 /external_sd	vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=display="MicroSD Card";storage;wipeingui;removable
 /misc		emmc		/dev/block/platform/ff3b0000.ufs/by-name/misc
