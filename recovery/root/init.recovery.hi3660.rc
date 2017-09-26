@@ -1,15 +1,13 @@
-import /init.usb.rc
+import /init.recovery.hi3660.ubs.rc
 
 on init
-    mkdir /cust
-
     symlink /dev/block/platform/ff3b0000.ufs /dev/block/bootdevice
 
-on fs
+on property:ro.board.platform=hi3660
     start teecd
-    start volisnotd
 
-on boot
+on fs
+    start volisnotd
 
 service teecd /sbin/teecd
     user root
@@ -18,8 +16,23 @@ service teecd /sbin/teecd
     seclabel u:r:tee:s0
 
 service volisnotd /sbin/volisnotd -m
+    oneshot
     user root
     group root
     disabled
-    oneshot
     seclabel u:r:tee:s0
+
+on property:vold.decrypt=trigger_shutdown_framework
+    class_reset server
+
+on property:vold.decrypt=trigger_load_persist_props
+    load_persist_props
+
+on property:vold.decrypt=trigger_post_fs_data
+    trigger post-fs-data
+
+on post-fs-data
+    trigger post-fs-data_hw
+
+on post-fs-data_hw
+    setprop vold.post_fs_data_done 1
